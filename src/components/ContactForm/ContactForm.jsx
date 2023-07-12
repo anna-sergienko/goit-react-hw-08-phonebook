@@ -1,11 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { nanoid } from 'nanoid';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { Form, FormLabel, FormInput, AddButton } from './ContactForm.styled';
-import { addContact } from '../../redux/operations';
-import { selectContacts } from 'redux/selectors';
+import { addContact } from '../../redux/contacts/operations';
+import { selectContacts } from 'redux/contacts/selectors';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -15,7 +14,6 @@ const ContactForm = () => {
     evt.preventDefault();
     const form = evt.target;
     const addedContact = {
-      id: nanoid(),
       name: form.elements.name.value,
       number: form.elements.number.value,
     };

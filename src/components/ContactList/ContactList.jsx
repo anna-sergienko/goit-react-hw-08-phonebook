@@ -1,12 +1,12 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteContact } from '../../redux/operations';
+import { deleteContact } from '../../redux/contacts/operations';
 import {
   getFilteredContactsList,
   selectContacts,
-  selectIsLoading,
+  // selectIsLoading,
   selectError,
-} from 'redux/selectors';
-// import PropTypes from 'prop-types';
+} from 'redux/contacts/selectors';
+
 import {
   ContactsList,
   ContactsItem,
@@ -18,12 +18,12 @@ function ContactList() {
   const distpatch = useDispatch();
   const filteredContacts = useSelector(getFilteredContactsList);
   const contacts = useSelector(selectContacts);
-  const isLoading = useSelector(selectIsLoading);
+  // const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
 
   return (
     <>
-      {isLoading && !error && <b>Request in progress...</b>}
+      {/* {isLoading && !error && <b>Request in progress...</b>} */}
       {error && <span>{error.message}</span>}
       {
         <ContactsList>
