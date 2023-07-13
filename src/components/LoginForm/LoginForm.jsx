@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/operationsAuth';
+import { LoginFormWrap, LoginFormLabel, LoginFormButton, LoginFormInput } from './LoginForm.styled';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -17,16 +18,17 @@ export const LoginForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
-      <label>
+    <LoginFormWrap onSubmit={handleSubmit} autoComplete="off">
+      <LoginFormLabel>
         Email
-        <input type="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required/> 
-      </label>
-      <label>
+        <LoginFormInput type="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required/> 
+      </LoginFormLabel>
+
+      <LoginFormLabel>
         Password
-        <input type="password" name="password" pattern="^[a-zA-Z0-9!@#$%^&*()-_=+`~[\]{}|:<>/?]+$" required/>
-      </label>
-      <button type="submit">Log In</button>
-    </form>
+        <LoginFormInput type="password" name="password" pattern="^[a-zA-Z0-9!@#$%^&*()-_=+`~[\]{}|:<>/?]+$" required/>
+      </LoginFormLabel>
+      <LoginFormButton type="submit">Log In</LoginFormButton>
+    </LoginFormWrap>
   );
 };

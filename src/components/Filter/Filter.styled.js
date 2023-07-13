@@ -2,26 +2,21 @@ import styled from "@emotion/styled";
 
 
 export const FilterLabel = styled.label`
-
-font-family: sans-serif;
-font-size: 25px;
+display: flex;
+flex-direction: column;
+margin-bottom: 16px;
+font-size: 16px;
+color: #00132C;
+font-family: "Avenir Next LT W01 Bold",sans-serif;
 `;
 
 
 export const FilterInput = styled.input`
-display: block;
-width: 300px;
 height: 30px;
-margin-bottom: 20px;
-margin-top: 20px;
-border: 1px solid #bdbdbd;
+border: 2px solid #D5EDF6;
 border-radius: 5px;
-background-color: #ccc;
-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-&:focus{
-  color: #212529;
-  background-color: #fff;
-  border-color: #bdbdbd;
-  outline: 0;
-}
 `;
+
+export const FilterWrapper = styled.div`
+width: 320px;
+`

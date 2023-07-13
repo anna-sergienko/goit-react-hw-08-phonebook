@@ -1,9 +1,13 @@
+import { Helmet } from 'react-helmet';
+import { HomeContainer, HomeGreeting } from '../pages/Home.styled';
+
 export default function Home() {
-    return (
-      <div>
-        <h1>
-         Wellcome to our service!
-        </h1>
-      </div>
-    );
-  }
+  return (
+    <HomeContainer>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
+      <HomeGreeting>Wellcome to our service!</HomeGreeting>
+    </HomeContainer>
+  );
+}

@@ -1,26 +1,7 @@
 import styled from "@emotion/styled";
 
-export const ContactsList = styled.ul`
-list-style: none;
-padding: 0;
-`;
-
-
-export const ContactsItem = styled.li`
-margin: 0 0 15px 15px;
-
-`;
-
-
-export const ContactsName = styled.p`
-font-weight: 500;
-font-size: 18px;
-font-family: "Avenir Next LT W01 Bold",sans-serif;
-`;
-
-
-export const DelContactBtn = styled.button`
-background-color: transparent;
+export const UserMenuButton = styled.button`
+  background-color: transparent;
   border: 1px solid #266DB6;
   box-sizing: border-box;
   color: #00132C;
@@ -52,5 +33,17 @@ background-color: transparent;
 &:hover:before {
       background-color: #6DCFF6;
     }
-}
-`;
+`
+
+export const UserMenuWrapper = styled.div`
+display: flex;
+align-items: center;
+gap: 12px;
+`
+
+export const UserNameField = styled.p`
+color: #6DCFF6;
+font-family: "Avenir Next LT W01 Bold",sans-serif;
+font-size: 16px;
+font-weight: 700;
+`

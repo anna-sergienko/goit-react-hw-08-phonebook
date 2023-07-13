@@ -2,46 +2,58 @@ import styled from "@emotion/styled";
 
 
 export const Form = styled.form`
-width: 600px;
-display: flex;
-flex-direction: column;
-
+width: 320px;
+margin-bottom: 20px;
 `;
 
 export const FormLabel = styled.label`
-font-family: sans-serif;
-font-size: 25px;
-
+display: flex;
+flex-direction: column;
+margin-bottom: 16px;
+font-size: 16px;
+color: #00132C;
+font-family: "Avenir Next LT W01 Bold",sans-serif;
 `;
 
 
 export const FormInput = styled.input`
-display: block;
-width: 300px;
 height: 30px;
-margin-bottom: 20px;
-margin-top: 20px;
-border: 1px solid #bdbdbd;
+border: 2px solid #D5EDF6;
 border-radius: 5px;
-background-color: #ccc;
-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-&:focus{
-  color: #212529;
-  background-color: #fff;
-  border-color: #bdbdbd;
-  outline: 0;
-}
 `;
 
 
 export const AddButton = styled.button`
-width: 90px;
-height: 30px;
-border: none;
-border-radius: 5px;
-background-color: #5F9EA0;
+background-color: transparent;
+border: 1px solid #266DB6;
+box-sizing: border-box;
+color: #00132C;
+font-family: "Avenir Next LT W01 Bold",sans-serif;
+font-size: 16px;
+font-weight: 700;
+line-height: 24px;
+padding: 2px 8px;
+position: relative;
+text-decoration: none;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
 &:hover{
-background-color: #008B8B;
-transition: all 200ms cubic-bezier(0.4, 0, 0.3, 1);
+background-color: transparent;
+cursor: pointer;
 }
+&:before{
+  background-color: #D5EDF6;
+  content: "";
+  height: calc(100% + 3px);
+  position: absolute;
+  right: -7px;
+  top: -9px;
+  transition: background-color 300ms ease-in;
+  width: 100%;
+  z-index: -1;
+}
+&:hover:before {
+    background-color: #6DCFF6;
+  }
 `;

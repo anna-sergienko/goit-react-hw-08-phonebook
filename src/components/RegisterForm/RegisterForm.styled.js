@@ -1,26 +1,20 @@
 import styled from "@emotion/styled";
 
-export const ContactsList = styled.ul`
-list-style: none;
-padding: 0;
-`;
+export const RegisterFormWrap = styled.form`
+width: 320px;
+`
 
-
-export const ContactsItem = styled.li`
-margin: 0 0 15px 15px;
-
-`;
-
-
-export const ContactsName = styled.p`
-font-weight: 500;
-font-size: 18px;
+export const RegisterFormLabel = styled.label`
+display: flex;
+flex-direction: column;
+margin-bottom: 16px;
+font-size: 16px;
+color: #00132C;
 font-family: "Avenir Next LT W01 Bold",sans-serif;
-`;
+`
 
-
-export const DelContactBtn = styled.button`
-background-color: transparent;
+export const RegisterFormButton = styled.button`
+  background-color: transparent;
   border: 1px solid #266DB6;
   box-sizing: border-box;
   color: #00132C;
@@ -28,7 +22,7 @@ background-color: transparent;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
-  padding: 2px 8px;
+  padding: 16px 23px;
   position: relative;
   text-decoration: none;
   user-select: none;
@@ -52,5 +46,13 @@ background-color: transparent;
 &:hover:before {
       background-color: #6DCFF6;
     }
-}
-`;
+`
+
+
+export const RegisterFormInput = styled.input`
+height: 25px;
+border: 2px solid #D5EDF6;
+border-radius: 5px;
+`
+
+
